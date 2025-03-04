@@ -1,4 +1,4 @@
-package bronze3.Day0224.Day0225;
+package bronze3.Day0225;
 
 import java.util.Arrays;
 import java.util.Scanner;
