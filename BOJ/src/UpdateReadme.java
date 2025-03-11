@@ -3,7 +3,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public class UpdateReadme {
-    private static final String README_PATH = "../README.md";
+    private static final String README_PATH = "../../README.md";
     private static final String SOLUTIONS_DIR = "BOJ/src";
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
