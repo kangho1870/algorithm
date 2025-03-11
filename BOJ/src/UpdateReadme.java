@@ -57,8 +57,9 @@ public class UpdateReadme {
                 // 날짜(파일이 속한 Day 폴더명) 추출
                 String date = extractDate(file);
 
-                // 파일 경로
-                String filePath = file.getPath().replace("\\", "/"); // Windows 경로 호환
+                // 파일 경로 (상대 경로 변환)
+                Path relativePath = Paths.get(SOLUTIONS_DIR).toAbsolutePath().relativize(file.toPath());
+                String filePath = relativePath.toString().replace("\\", "/"); // Windows 경로 호환
 
                 sb.append(String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |\n",
                         date, problemNumber, problemUrl, difficulty, filePath));
