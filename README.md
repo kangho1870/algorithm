@@ -17,7 +17,6 @@
 | 2025-02-24 | [기찍 N](https://www.acmicpc.net/problem/2742) | 브론즈 4 | [🔗 코드 보기](BOJ/src/bronze4/Day0224/BOJ2742.java) |
 | 2025-02-24 | [R2](https://www.acmicpc.net/problem/3046) | 브론즈 4 | [🔗 코드 보기](BOJ/src/bronze4/Day0224/BOJ3046.java) |
 | 2025-02-24 | [상근날드](https://www.acmicpc.net/problem/3046) | 브론즈 4 | [🔗 코드 보기](BOJ/src/bronze4/Day0224/BOJ5543.java) |
-
 | 2025-02-24 | [최소, 최대](https://www.acmicpc.net/problem/10818) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0224/BOJ10818.java) |
 | 2025-02-24 | [오븐 시계](https://www.acmicpc.net/problem/2525) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0224/BOJ2525.java) |
 | 2025-02-24 | [최댓값](https://www.acmicpc.net/problem/2562) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0224/BOJ2562.java) |
@@ -37,13 +36,11 @@
 | 2025-03-02 | [세탁소 사장 동혁](https://www.acmicpc.net/problem/2720) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0302/BOJ2720.java) |
 | 2025-03-02 | [중앙 이동 알고리즘](https://www.acmicpc.net/problem/2903) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0302/BOJ2903.java) |
 | 2025-03-04 | [윷놀이](https://www.acmicpc.net/problem/2490) | 브론즈 3 | [🔗 코드 보기](BOJ/src/bronze3/Day0304/BOJ2490.java) |
-
 | 2025-03-04 | [단어의 개수](https://www.acmicpc.net/problem/1152) | 브론즈 2 | [🔗 코드 보기](BOJ/src/bronze2/Day0304/BOJ1152.java) |
 | 2025-03-04 | [숫자의 개수](https://www.acmicpc.net/problem/2577) | 브론즈 2 | [🔗 코드 보기](BOJ/src/bronze2/Day0304/BOJ2577.java) |
 | 2025-03-04 | [수 정렬하기](https://www.acmicpc.net/problem/2750) | 브론즈 2 | [🔗 코드 보기](BOJ/src/bronze2/Day0304/BOJ2750.java) |
 | 2025-03-10 | [문자열 분석](https://www.acmicpc.net/problem/10820) | 브론즈 2 | [🔗 코드 보기](BOJ/src/bronze2/Day0310/BOJ10820.java) |
 | 2025-03-10 | [그릇](https://www.acmicpc.net/problem/7567) | 브론즈 2 | [🔗 코드 보기](BOJ/src/bronze2/Day0310/BOJ7567.java) |
-
 | 2025-03-10 | [더하기 사이클](https://www.acmicpc.net/problem/1110) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0310/BOJ1110.java) |
 | 2025-03-10 | [단어 공부](https://www.acmicpc.net/problem/1157) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0310/BOJ1157.java) |
 | 2025-03-11 | [진법 변환 2](https://www.acmicpc.net/problem/11005) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0311/BOJ11005.java) |
