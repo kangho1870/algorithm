@@ -91,7 +91,12 @@ public class UpdateReadme {
         while (parent != null) {
             String name = parent.getName();
             if (name.matches("bronze[1-5]|silver[1-5]|gold[1-5]|platinum[1-5]|diamond[1-5]|ruby[1-5]")) {
-                return name;
+                return name.replaceAll("bronze", "브론즈 ")
+                        .replaceAll("silver", "실버 ")
+                        .replaceAll("gold", "골드 ")
+                        .replaceAll("platinum", "플래티넘 ")
+                        .replaceAll("diamond", "다이아몬드 ")
+                        .replaceAll("ruby", "루비 ");
             }
             parent = parent.getParentFile();
         }
@@ -101,8 +106,12 @@ public class UpdateReadme {
     private static String extractDate(File file) {
         File parent = file.getParentFile();
         while (parent != null) {
-            if (parent.getName().matches("Day\\d{4}")) {  // 예: Day0312
-                return parent.getName();
+            if (parent.getName().matches("Day\\d{4}")) {
+                String dayString = parent.getName().substring(3); // "Day0312" → "0312"
+                int month = Integer.parseInt(dayString.substring(0, 2));
+                int day = Integer.parseInt(dayString.substring(2, 4));
+                int year = Calendar.getInstance().get(Calendar.YEAR); // 현재 연도 가져오기
+                return String.format("%d-%02d-%02d", year, month, day);
             }
             parent = parent.getParentFile();
         }
