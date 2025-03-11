@@ -4,7 +4,8 @@ import java.util.*;
 
 public class UpdateReadme {
     private static final String README_PATH = "../../README.md";
-    private static final String SOLUTIONS_DIR = System.getProperty("user.dir"); // ✅ 절대 경로 설정
+    private static final String SOLUTIONS_DIR = System.getProperty("user.dir");
+    private static final String GITHUB_REPO_URL = "https://github.com/kangho1870/algorithm/blob/main/";
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
                     "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n" +
@@ -76,11 +77,11 @@ public class UpdateReadme {
                 String difficulty = extractDifficulty(file);
                 String date = extractDate(file);
 
-                Path relativePath = Paths.get(SOLUTIONS_DIR).toAbsolutePath().relativize(file.toPath());
-                String filePath = relativePath.toString().replace("\\", "/");
+                String relativePath = file.getAbsolutePath().replace(SOLUTIONS_DIR, "").replace("\\", "/");
+                String githubFilePath = GITHUB_REPO_URL + relativePath;
 
                 sb.append(String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |\n",
-                        date, problemNumber, problemUrl, difficulty, filePath));
+                        date, problemNumber, problemUrl, difficulty, githubFilePath));
                 System.out.println("📌 문제 추가됨: " + problemNumber);
             }
         }
