@@ -33,6 +33,11 @@ public class UpdateReadme {
         StringBuilder sb = new StringBuilder();
         File solutionsDir = new File(SOLUTIONS_DIR);
 
+        if (!solutionsDir.exists() || !solutionsDir.isDirectory()) {
+            System.out.println("❌ 솔루션 디렉토리를 찾을 수 없습니다: " + solutionsDir.getAbsolutePath());
+            return "";
+        }
+
         if (solutionsDir.exists() && solutionsDir.isDirectory()) {
             for (File difficultyDir : Objects.requireNonNull(solutionsDir.listFiles())) {
                 if (difficultyDir.isDirectory()) {
@@ -63,6 +68,7 @@ public class UpdateReadme {
 
                 sb.append(String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |\n",
                         date, problemNumber, problemUrl, difficulty, filePath));
+                System.out.println("📌 문제 추가됨: " + problemNumber);
             }
         }
     }
