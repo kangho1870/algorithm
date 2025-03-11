@@ -22,7 +22,7 @@ jobs:
 
       - name: README 업데이트 스크립트 실행
         run: |
-          cd src
+          cd BOJ/src
           javac UpdateReadme.java
           java UpdateReadme
 
