@@ -26,9 +26,22 @@ jobs:
           javac UpdateReadme.java
           java UpdateReadme
 
-      - name: 변경사항 커밋 및 푸시
+          - name: 변경사항 커밋 및 푸시 (디버깅 추가)
+          run: |
+            git config --global user.name "GitHub Actions Bot"
+            git config --global user.email "actions@github.com"
+            
+            echo "🔍 현재 변경된 파일 목록:"
+            git status  # 변경된 파일이 있는지 확인
+            
+            git add README.md
+            echo "✅ git add 실행 완료"
+            
+            git status  # git add 이후 상태 확인
+  
+            git commit -m "auto update: README.md" || echo "⚠ No changes to commit"
+            git push || echo "⚠ No changes to push"
+
+      - name: README 변경 확인
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          git add README.md
-          git commit -m "auto update: README.md" || echo "No changes to commit"
+          cat README.md  # 변경된 README 내용 확인
