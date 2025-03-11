@@ -4,7 +4,7 @@ import java.util.*;
 
 public class UpdateReadme {
     private static final String README_PATH = "../../README.md";
-    private static final String SOLUTIONS_DIR = "BOJ/src";
+    private static final String SOLUTIONS_DIR = Paths.get("BOJ/src").toAbsolutePath().toString();
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
                     "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n" +
@@ -32,6 +32,7 @@ public class UpdateReadme {
     private static String getProblemList() throws IOException {
         StringBuilder sb = new StringBuilder();
         File solutionsDir = new File(SOLUTIONS_DIR);
+        System.out.println("🔍 현재 탐색 중인 디렉토리: " + solutionsDir.getAbsolutePath());
 
         if (!solutionsDir.exists() || !solutionsDir.isDirectory()) {
             System.out.println("❌ 솔루션 디렉토리를 찾을 수 없습니다: " + solutionsDir.getAbsolutePath());
