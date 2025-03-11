@@ -44,6 +44,7 @@
 | 2025-03-10 | [더하기 사이클](https://www.acmicpc.net/problem/1110) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0310/BOJ1110.java) |
 | 2025-03-10 | [단어 공부](https://www.acmicpc.net/problem/1157) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0310/BOJ1157.java) |
 | 2025-03-11 | [진법 변환 2](https://www.acmicpc.net/problem/11005) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0311/BOJ11005.java) |
+| 2025-03-12 | [평균은 넘겠지](https://www.acmicpc.net/problem/4344) | 브론즈 1 | [🔗 코드 보기](BOJ/src/bronze1/Day0312/BOJ4344.java) |
 
 
 
