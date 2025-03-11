@@ -3,8 +3,8 @@ import java.nio.file.*;
 import java.util.*;
 
 public class UpdateReadme {
-    private static final String README_PATH = "../../README.md";
-    private static final String SOLUTIONS_DIR = Paths.get("BOJ/src").toAbsolutePath().toString();
+    private static final String README_PATH = "README.md";
+    private static final String SOLUTIONS_DIR = System.getProperty("user.dir") + "/BOJ/src"; // ✅ 절대 경로 설정
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
                     "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n" +
@@ -21,9 +21,27 @@ public class UpdateReadme {
 
     public static void main(String[] args) {
         try {
+            File readmeFile = new File(README_PATH);
+            if (!readmeFile.exists()) {
+                System.out.println("❌ README.md 파일이 존재하지 않습니다.");
+                return;
+            }
+
+            // 현재 디렉토리 확인
+            System.out.println("🔍 현재 작업 디렉토리: " + System.getProperty("user.dir"));
+            System.out.println("🔍 탐색할 솔루션 디렉토리: " + SOLUTIONS_DIR);
+
             String problemList = getProblemList();
+
+            String currentReadme = Files.readString(Paths.get(README_PATH));
             String newReadme = README_TEMPLATE.replace("{problems}", problemList);
-            Files.write(Paths.get(README_PATH), newReadme.getBytes());
+
+            if (!currentReadme.equals(newReadme)) {
+                Files.write(Paths.get(README_PATH), newReadme.getBytes());
+                System.out.println("✅ README.md 파일이 업데이트되었습니다.");
+            } else {
+                System.out.println("⚠ 변경 사항이 없어 README.md를 수정하지 않았습니다.");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -32,6 +50,7 @@ public class UpdateReadme {
     private static String getProblemList() throws IOException {
         StringBuilder sb = new StringBuilder();
         File solutionsDir = new File(SOLUTIONS_DIR);
+
         System.out.println("🔍 현재 탐색 중인 디렉토리: " + solutionsDir.getAbsolutePath());
 
         if (!solutionsDir.exists() || !solutionsDir.isDirectory()) {
@@ -39,11 +58,9 @@ public class UpdateReadme {
             return "";
         }
 
-        if (solutionsDir.exists() && solutionsDir.isDirectory()) {
-            for (File difficultyDir : Objects.requireNonNull(solutionsDir.listFiles())) {
-                if (difficultyDir.isDirectory()) {
-                    traverseFiles(difficultyDir, sb);
-                }
+        for (File difficultyDir : Objects.requireNonNull(solutionsDir.listFiles())) {
+            if (difficultyDir.isDirectory()) {
+                traverseFiles(difficultyDir, sb);
             }
         }
         return sb.toString();
@@ -52,20 +69,15 @@ public class UpdateReadme {
     private static void traverseFiles(File folder, StringBuilder sb) {
         for (File file : Objects.requireNonNull(folder.listFiles())) {
             if (file.isDirectory()) {
-                traverseFiles(file, sb);  // 재귀 호출로 모든 하위 폴더 탐색
+                traverseFiles(file, sb);
             } else if (file.getName().endsWith(".java")) {
                 String problemNumber = file.getName().replaceAll("[^0-9]", "");
                 String problemUrl = "https://www.acmicpc.net/problem/" + problemNumber;
-
-                // 난이도(브론즈1, 브론즈2 등) 추출
                 String difficulty = extractDifficulty(file);
-
-                // 날짜(파일이 속한 Day 폴더명) 추출
                 String date = extractDate(file);
 
-                // 파일 경로 (상대 경로 변환)
                 Path relativePath = Paths.get(SOLUTIONS_DIR).toAbsolutePath().relativize(file.toPath());
-                String filePath = relativePath.toString().replace("\\", "/"); // Windows 경로 호환
+                String filePath = relativePath.toString().replace("\\", "/");
 
                 sb.append(String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |\n",
                         date, problemNumber, problemUrl, difficulty, filePath));
