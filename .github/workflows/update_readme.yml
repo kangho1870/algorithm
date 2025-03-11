@@ -20,11 +20,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: 현재 디렉토리 및 파일 목록 출력 (디버깅용)
-        run: |
-          pwd  # 현재 디렉토리 확인
-          ls -R  # 전체 파일 구조 확인
-
       - name: README 업데이트 스크립트 실행
         working-directory: BOJ/src
         run: |
@@ -39,7 +34,7 @@ jobs:
           echo "🔍 현재 변경된 파일 목록:"
           git status  # 변경된 파일이 있는지 확인
           
-          git add algorithm/README.md
+          git add README.md
           echo "✅ git add 실행 완료"
           
           git status  # git add 이후 상태 확인
