@@ -50,3 +50,4 @@
 | 2025-03-11 | [11005](https://www.acmicpc.net/problem/11005) | 브론즈 1 | [🔗 코드 보기](bronze1/Day0311/BOJ11005.java) |
 | 2025-03-11 | [2163](https://www.acmicpc.net/problem/2163) | 브론즈 1 | [🔗 코드 보기](bronze1/Day0311/BOJ2163.java) |
 | 2025-03-12 | [4344](https://www.acmicpc.net/problem/4344) | 브론즈 1 | [🔗 코드 보기](bronze1/Day0312/BOJ4344.java) |
+| 2025-03-12 | [2869](https://www.acmicpc.net/problem/2869) | 브론즈 1 | [🔗 코드 보기](bronze1/Day0312/BOJ2869.java) |
