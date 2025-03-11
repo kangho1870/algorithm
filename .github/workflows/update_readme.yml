@@ -34,7 +34,7 @@ jobs:
           echo "🔍 현재 변경된 파일 목록:"
           git status  # 변경된 파일이 있는지 확인
           
-          git add README.md
+          git add algorithm/README.md
           echo "✅ git add 실행 완료"
           
           git status  # git add 이후 상태 확인

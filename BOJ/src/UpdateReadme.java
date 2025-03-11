@@ -3,8 +3,8 @@ import java.nio.file.*;
 import java.util.*;
 
 public class UpdateReadme {
-    private static final String README_PATH = "README.md";
-    private static final String SOLUTIONS_DIR = "solutions";
+    private static final String README_PATH = "algorithm/README.md";
+    private static final String SOLUTIONS_DIR = "algorithm/BOJ/src";
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
                     "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n" +
