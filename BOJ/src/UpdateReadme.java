@@ -49,10 +49,8 @@ public class UpdateReadme {
     }
 
     private static String getProblemList() throws IOException {
-        StringBuilder sb = new StringBuilder();
+        List<String> problemEntries = new ArrayList<>();
         File solutionsDir = new File(SOLUTIONS_DIR);
-
-        System.out.println("🔍 현재 탐색 중인 디렉토리: " + solutionsDir.getAbsolutePath());
 
         if (!solutionsDir.exists() || !solutionsDir.isDirectory()) {
             System.out.println("❌ 솔루션 디렉토리를 찾을 수 없습니다: " + solutionsDir.getAbsolutePath());
@@ -61,16 +59,20 @@ public class UpdateReadme {
 
         for (File difficultyDir : Objects.requireNonNull(solutionsDir.listFiles())) {
             if (difficultyDir.isDirectory()) {
-                traverseFiles(difficultyDir, sb);
+                traverseFiles(difficultyDir, problemEntries);
             }
         }
-        return sb.toString();
+
+        // 📌 날짜 기준 정렬
+        problemEntries.sort(Comparator.comparing(entry -> entry.split("\\|")[1].trim()));
+
+        return String.join("\n", problemEntries);
     }
 
-    private static void traverseFiles(File folder, StringBuilder sb) {
+    private static void traverseFiles(File folder, List<String> problemEntries) {
         for (File file : Objects.requireNonNull(folder.listFiles())) {
             if (file.isDirectory()) {
-                traverseFiles(file, sb);
+                traverseFiles(file, problemEntries);
             } else if (file.getName().endsWith(".java")) {
                 String problemNumber = file.getName().replaceAll("[^0-9]", "");
                 String problemUrl = "https://www.acmicpc.net/problem/" + problemNumber;
@@ -80,9 +82,10 @@ public class UpdateReadme {
                 String relativePath = file.getAbsolutePath().replace(SOLUTIONS_DIR, "").replace("\\", "/");
                 String githubFilePath = GITHUB_REPO_URL + relativePath;
 
-                sb.append(String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |\n",
-                        date, problemNumber, problemUrl, difficulty, githubFilePath));
-                System.out.println("📌 문제 추가됨: " + problemNumber);
+                String entry = String.format("| %s | [%s](%s) | %s | [🔗 코드 보기](%s) |",
+                        date, problemNumber, problemUrl, difficulty, githubFilePath);
+
+                problemEntries.add(entry);
             }
         }
     }
