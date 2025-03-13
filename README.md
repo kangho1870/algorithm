@@ -55,3 +55,7 @@
 | 2025-03-13 | [2309](https://www.acmicpc.net/problem/2309) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0313/BOJ2309.java) |
 | 2025-03-13 | [11653](https://www.acmicpc.net/problem/11653) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0313/BOJ11653.java) |
 | 2025-03-13 | [1924](https://www.acmicpc.net/problem/1924) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0313/BOJ1924.java) |
+| 2025-03-14 | [1037](https://www.acmicpc.net/problem/1037) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0314/BOJ1037.java) |
+| 2025-03-14 | [10798](https://www.acmicpc.net/problem/10798) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0314/BOJ10798.java) |
+| 2025-03-14 | [2748](https://www.acmicpc.net/problem/2748) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0314/BOJ2748.java) |
+| 2025-03-14 | [1259](https://www.acmicpc.net/problem/1259) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0314/BOJ1259.java) |
