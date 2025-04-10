@@ -8,8 +8,7 @@ public class UpdateReadme {
     private static final String GITHUB_REPO_URL = "https://github.com/kangho1870/algorithm/blob/main/BOJ/src";
     private static final String README_TEMPLATE =
             "# 🚀 Baekjoon Algorithm Study\n" +
-                    "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n" +
-                    "목표: 브론즈부터 시작하여 차근차근 실력을 쌓아가기!\n\n" +
+                    "백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.\n\n" +
                     "## 🛠 사용 언어  \n" +
                     "- Java  \n\n" +
                     "## 💡 목표  \n" +
