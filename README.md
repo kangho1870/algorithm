@@ -1,6 +1,5 @@
 # 🚀 Baekjoon Algorithm Study
 백준 알고리즘 문제를 하루 2~3문제씩 꾸준히 풀어나가는 레포지토리입니다.
-목표: 브론즈부터 시작하여 차근차근 실력을 쌓아가기!
 
 ## 🛠 사용 언어  
 - Java  
@@ -61,3 +60,6 @@
 | 2025-03-14 | [1259](https://www.acmicpc.net/problem/1259) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0314/BOJ1259.java) |
 | 2025-03-18 | [9506](https://www.acmicpc.net/problem/9506) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0318/BOJ9506.java) |
 | 2025-03-18 | [1032](https://www.acmicpc.net/problem/1032) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0318/BOJ1032.java) |
+| 2025-03-19 | [1292](https://www.acmicpc.net/problem/1292) | 브론즈 1 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/bronze1/Day0319/BOJ1292.java) |
+| 2025-04-10 | [1436](https://www.acmicpc.net/problem/1436) | 실버 5 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/silver5/Day0410/BOJ1436.java) |
+| 2025-04-10 | [1181](https://www.acmicpc.net/problem/1181) | 실버 5 | [🔗 코드 보기](https://github.com/kangho1870/algorithm/blob/main/BOJ/src/silver5/Day0410/BOJ1181.java) |
